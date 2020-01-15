@@ -164,7 +164,7 @@ function number_grouping_civicrm_tokenValues(&$values, $cids, $job = NULL, $toke
 
     // Only for custom tokens
     if (substr($tokenName, 0, 6) != 'custom') {
-      return;
+      continue;
     }
 
     foreach ($cids as $cid) {

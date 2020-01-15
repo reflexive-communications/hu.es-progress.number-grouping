@@ -1,15 +1,18 @@
 # hu.es-progress.number-grouping
 
-![Screenshot](/images/screenshot.png)
+![Screenshot](images/screenshot.png)
 
-(*FIXME: In one or two paragraphs, describe what the extension does and why one would download it. *)
+This extension formats numbers displayed in contact email tokens.
+
+Current format groups numbers by thousands, displays no decimals and use the '.' (period)
+as thousands separator.
 
 The extension is licensed under [AGPL-3.0](LICENSE.txt).
 
 ## Requirements
 
 * PHP v7.0+
-* CiviCRM (*FIXME: Version number*)
+* CiviCRM (5.0)
 
 ## Installation (Web UI)
 
@@ -22,7 +25,7 @@ install it with the command-line tool [cv](https://github.com/civicrm/cv).
 
 ```bash
 cd <extension-dir>
-cv dl hu.es-progress.number-grouping@https://github.com/FIXME/hu.es-progress.number-grouping/archive/master.zip
+cv dl hu.es-progress.number-grouping@https://github.com/semseysandor/hu.es-progress.number-grouping/archive/master.zip
 ```
 
 ## Installation (CLI, Git)
@@ -31,14 +34,10 @@ Sysadmins and developers may clone the [Git](https://en.wikipedia.org/wiki/Git) 
 install it with the command-line tool [cv](https://github.com/civicrm/cv).
 
 ```bash
-git clone https://github.com/FIXME/hu.es-progress.number-grouping.git
+git clone https://github.com/semseysandor/hu.es-progress.number-grouping.git
 cv en number_grouping
 ```
 
 ## Usage
 
-(* FIXME: Where would a new user navigate to get started? What changes would they see? *)
-
-## Known Issues
-
-(* FIXME *)
+CiviMail email tokens
