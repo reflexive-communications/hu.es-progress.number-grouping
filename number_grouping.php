@@ -169,8 +169,13 @@ function number_grouping_civicrm_tokenValues(&$values, $cids, $job = NULL, $toke
     ->setSelect([
       'monetaryThousandSeparator',
       'monetaryDecimalPoint',
+
     ])
     ->execute();
+
+  if (isset($result['error_code'])) {
+    return;
+  }
 
   foreach ($result as $row) {
     $settings[$row['name']] = $row['value'];
@@ -189,7 +194,8 @@ function number_grouping_civicrm_tokenValues(&$values, $cids, $job = NULL, $toke
 
       // Is it numeric?
       if (is_numeric($value)) {
-        $values[$cid][$tokenName] = number_format($value, 0, $settings['monetaryDecimalPoint'],$settings['monetaryThousandSeparator'] );
+        $values[$cid][$tokenName] = number_format($value, 0, $settings['monetaryDecimalPoint'],
+          $settings['monetaryThousandSeparator']);
       }
     }
   }
