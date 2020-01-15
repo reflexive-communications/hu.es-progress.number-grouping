@@ -96,6 +96,8 @@ function number_grouping_civicrm_managed(&$entities) {
  * Note: This hook only runs in CiviCRM 4.4+.
  *
  * @link https://docs.civicrm.org/dev/en/latest/hooks/hook_civicrm_caseTypes
+ *
+ * @throws \CRM_Core_Exception
  */
 function number_grouping_civicrm_caseTypes(&$caseTypes) {
   _number_grouping_civix_civicrm_caseTypes($caseTypes);
@@ -152,12 +154,26 @@ function number_grouping_civicrm_themes(&$themes) {
  * @param null $job
  * @param array $tokens
  * @param null $context
+ *
+ * @throws \Civi\API\Exception\UnauthorizedException
  */
 function number_grouping_civicrm_tokenValues(&$values, $cids, $job = NULL, $tokens = [], $context = NULL) {
 
   // Apply only for contact tokens
   if (!isset($tokens['contact'])) {
     return;
+  }
+
+  // Get settings
+  $result = \Civi\Api4\Setting::get()
+    ->setSelect([
+      'monetaryThousandSeparator',
+      'monetaryDecimalPoint',
+    ])
+    ->execute();
+
+  foreach ($result as $row) {
+    $settings[$row['name']] = $row['value'];
   }
 
   foreach ($tokens['contact'] as $tokenName => $tokenValue) {
@@ -171,9 +187,9 @@ function number_grouping_civicrm_tokenValues(&$values, $cids, $job = NULL, $toke
 
       $value = $values[$cid][$tokenName];
 
-      // Is it numeric? And not null, as null is handled as false --> no output displayed
-      if (is_numeric($value) && $value !== '0.00') {
-        $values[$cid][$tokenName] = number_format($value, 0, ',', '.');
+      // Is it numeric?
+      if (is_numeric($value)) {
+        $values[$cid][$tokenName] = number_format($value, 0, $settings['monetaryDecimalPoint'],$settings['monetaryThousandSeparator'] );
       }
     }
   }

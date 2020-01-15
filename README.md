@@ -41,3 +41,7 @@ cv en number_grouping
 ## Usage
 
 CiviMail email tokens
+
+## Known limitation
+
+If a value is zero, nothing will be displayed
