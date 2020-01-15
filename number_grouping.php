@@ -169,10 +169,11 @@ function number_grouping_civicrm_tokenValues(&$values, $cids, $job = NULL, $toke
 
     foreach ($cids as $cid) {
 
-      // Is it numeric?
-      if (is_numeric($values[$cid][$tokenName])) {
-        // Format numbers
-        $values[$cid][$tokenName] = number_format($values[$cid][$tokenName], 0, ',', '.');
+      $value = $values[$cid][$tokenName];
+
+      // Is it numeric? And not null, as null is handled as false --> no output displayed
+      if (is_numeric($value) && $value !== '0.00') {
+        $values[$cid][$tokenName] = number_format($value, 0, ',', '.');
       }
     }
   }

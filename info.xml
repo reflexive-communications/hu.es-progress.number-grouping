@@ -9,7 +9,7 @@
     <email>sandor.semsey@es-progress.hu</email>
   </maintainer>
   <releaseDate>2020-01-14</releaseDate>
-  <version>1.0</version>
+  <version>1.1</version>
   <develStage>stable</develStage>
   <compatibility>
     <ver>5.18</ver>
