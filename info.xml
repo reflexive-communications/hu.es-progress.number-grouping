@@ -1,0 +1,23 @@
+<?xml version="1.0"?>
+<extension key="hu.es-progress.number-grouping" type="module">
+  <file>number_grouping</file>
+  <name>Number grouping</name>
+  <description>Group numbers in tokens</description>
+  <license>AGPL-3.0</license>
+  <maintainer>
+    <author>Sandor Semsey</author>
+    <email>sandor.semsey@es-progress.hu</email>
+  </maintainer>
+  <releaseDate>2020-01-14</releaseDate>
+  <version>0.5</version>
+  <develStage>alpha</develStage>
+  <compatibility>
+    <ver>5.20</ver>
+  </compatibility>
+  <classloader>
+    <psr4 prefix="Civi\" path="Civi"/>
+  </classloader>
+  <civix>
+    <namespace>CRM/NumberGrouping</namespace>
+  </civix>
+</extension>
