@@ -7,8 +7,7 @@
 
 This extension formats numbers displayed in contact email tokens.
 
-Current format groups numbers by thousands, displays no decimals and use the '.' (period)
-as thousands separator.
+Current format groups numbers by thousands, displays no decimals.
 
 Currently numbers are displayed as whole numbers, decimal parts not shown.
 
