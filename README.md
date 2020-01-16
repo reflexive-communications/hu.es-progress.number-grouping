@@ -1,11 +1,16 @@
 # hu.es-progress.number-grouping
 
-![Screenshot](images/screenshot.png)
+## Before
+![Screenshot before](images/before.png)
+## After
+![Screenshot after](images/after.png)
 
 This extension formats numbers displayed in contact email tokens.
 
 Current format groups numbers by thousands, displays no decimals and use the '.' (period)
 as thousands separator.
+
+Currently numbers are displayed as whole numbers, decimal parts not shown.
 
 The extension is licensed under [AGPL-3.0](LICENSE.txt).
 
@@ -44,4 +49,6 @@ CiviMail email tokens
 
 ## Known limitation
 
-If a value is zero, nothing will be displayed
+Number of decimals displayed can't be set.
+
+If no decimals are displayed and a value is zero, nothing will be displayed.

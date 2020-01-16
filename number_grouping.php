@@ -169,7 +169,6 @@ function number_grouping_civicrm_tokenValues(&$values, $cids, $job = NULL, $toke
     ->setSelect([
       'monetaryThousandSeparator',
       'monetaryDecimalPoint',
-
     ])
     ->execute();
 
