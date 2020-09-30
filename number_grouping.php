@@ -2,15 +2,14 @@
 
 require_once 'number_grouping.civix.php';
 
-use CRM_NumberGrouping_ExtensionUtil as E;
-
 /**
  * Implements hook_civicrm_config().
  *
  * @link https://docs.civicrm.org/dev/en/latest/hooks/hook_civicrm_config/
  */
-function number_grouping_civicrm_config(&$config) {
-  _number_grouping_civix_civicrm_config($config);
+function number_grouping_civicrm_config(&$config)
+{
+    _number_grouping_civix_civicrm_config($config);
 }
 
 /**
@@ -18,8 +17,9 @@ function number_grouping_civicrm_config(&$config) {
  *
  * @link https://docs.civicrm.org/dev/en/latest/hooks/hook_civicrm_xmlMenu
  */
-function number_grouping_civicrm_xmlMenu(&$files) {
-  _number_grouping_civix_civicrm_xmlMenu($files);
+function number_grouping_civicrm_xmlMenu(&$files)
+{
+    _number_grouping_civix_civicrm_xmlMenu($files);
 }
 
 /**
@@ -27,8 +27,9 @@ function number_grouping_civicrm_xmlMenu(&$files) {
  *
  * @link https://docs.civicrm.org/dev/en/latest/hooks/hook_civicrm_install
  */
-function number_grouping_civicrm_install() {
-  _number_grouping_civix_civicrm_install();
+function number_grouping_civicrm_install()
+{
+    _number_grouping_civix_civicrm_install();
 }
 
 /**
@@ -36,8 +37,9 @@ function number_grouping_civicrm_install() {
  *
  * @link https://docs.civicrm.org/dev/en/latest/hooks/hook_civicrm_postInstall
  */
-function number_grouping_civicrm_postInstall() {
-  _number_grouping_civix_civicrm_postInstall();
+function number_grouping_civicrm_postInstall()
+{
+    _number_grouping_civix_civicrm_postInstall();
 }
 
 /**
@@ -45,8 +47,9 @@ function number_grouping_civicrm_postInstall() {
  *
  * @link https://docs.civicrm.org/dev/en/latest/hooks/hook_civicrm_uninstall
  */
-function number_grouping_civicrm_uninstall() {
-  _number_grouping_civix_civicrm_uninstall();
+function number_grouping_civicrm_uninstall()
+{
+    _number_grouping_civix_civicrm_uninstall();
 }
 
 /**
@@ -54,8 +57,9 @@ function number_grouping_civicrm_uninstall() {
  *
  * @link https://docs.civicrm.org/dev/en/latest/hooks/hook_civicrm_enable
  */
-function number_grouping_civicrm_enable() {
-  _number_grouping_civix_civicrm_enable();
+function number_grouping_civicrm_enable()
+{
+    _number_grouping_civix_civicrm_enable();
 }
 
 /**
@@ -63,8 +67,9 @@ function number_grouping_civicrm_enable() {
  *
  * @link https://docs.civicrm.org/dev/en/latest/hooks/hook_civicrm_disable
  */
-function number_grouping_civicrm_disable() {
-  _number_grouping_civix_civicrm_disable();
+function number_grouping_civicrm_disable()
+{
+    _number_grouping_civix_civicrm_disable();
 }
 
 /**
@@ -72,8 +77,9 @@ function number_grouping_civicrm_disable() {
  *
  * @link https://docs.civicrm.org/dev/en/latest/hooks/hook_civicrm_upgrade
  */
-function number_grouping_civicrm_upgrade($op, CRM_Queue_Queue $queue = NULL) {
-  return _number_grouping_civix_civicrm_upgrade($op, $queue);
+function number_grouping_civicrm_upgrade($op, CRM_Queue_Queue $queue = null)
+{
+    return _number_grouping_civix_civicrm_upgrade($op, $queue);
 }
 
 /**
@@ -84,8 +90,9 @@ function number_grouping_civicrm_upgrade($op, CRM_Queue_Queue $queue = NULL) {
  *
  * @link https://docs.civicrm.org/dev/en/latest/hooks/hook_civicrm_managed
  */
-function number_grouping_civicrm_managed(&$entities) {
-  _number_grouping_civix_civicrm_managed($entities);
+function number_grouping_civicrm_managed(&$entities)
+{
+    _number_grouping_civix_civicrm_managed($entities);
 }
 
 /**
@@ -99,8 +106,9 @@ function number_grouping_civicrm_managed(&$entities) {
  *
  * @throws \CRM_Core_Exception
  */
-function number_grouping_civicrm_caseTypes(&$caseTypes) {
-  _number_grouping_civix_civicrm_caseTypes($caseTypes);
+function number_grouping_civicrm_caseTypes(&$caseTypes)
+{
+    _number_grouping_civix_civicrm_caseTypes($caseTypes);
 }
 
 /**
@@ -113,8 +121,9 @@ function number_grouping_civicrm_caseTypes(&$caseTypes) {
  *
  * @link https://docs.civicrm.org/dev/en/latest/hooks/hook_civicrm_angularModules
  */
-function number_grouping_civicrm_angularModules(&$angularModules) {
-  _number_grouping_civix_civicrm_angularModules($angularModules);
+function number_grouping_civicrm_angularModules(&$angularModules)
+{
+    _number_grouping_civix_civicrm_angularModules($angularModules);
 }
 
 /**
@@ -122,8 +131,9 @@ function number_grouping_civicrm_angularModules(&$angularModules) {
  *
  * @link https://docs.civicrm.org/dev/en/latest/hooks/hook_civicrm_alterSettingsFolders
  */
-function number_grouping_civicrm_alterSettingsFolders(&$metaDataFolders = NULL) {
-  _number_grouping_civix_civicrm_alterSettingsFolders($metaDataFolders);
+function number_grouping_civicrm_alterSettingsFolders(&$metaDataFolders = null)
+{
+    _number_grouping_civix_civicrm_alterSettingsFolders($metaDataFolders);
 }
 
 /**
@@ -133,15 +143,17 @@ function number_grouping_civicrm_alterSettingsFolders(&$metaDataFolders = NULL) 
  *
  * @link https://docs.civicrm.org/dev/en/latest/hooks/hook_civicrm_entityTypes
  */
-function number_grouping_civicrm_entityTypes(&$entityTypes) {
-  _number_grouping_civix_civicrm_entityTypes($entityTypes);
+function number_grouping_civicrm_entityTypes(&$entityTypes)
+{
+    _number_grouping_civix_civicrm_entityTypes($entityTypes);
 }
 
 /**
  * Implements hook_civicrm_thems().
  */
-function number_grouping_civicrm_themes(&$themes) {
-  _number_grouping_civix_civicrm_themes($themes);
+function number_grouping_civicrm_themes(&$themes)
+{
+    _number_grouping_civix_civicrm_themes($themes);
 }
 
 /**
@@ -157,45 +169,49 @@ function number_grouping_civicrm_themes(&$themes) {
  *
  * @throws \Civi\API\Exception\UnauthorizedException
  */
-function number_grouping_civicrm_tokenValues(&$values, $cids, $job = NULL, $tokens = [], $context = NULL) {
-
-  // Apply only for contact tokens
-  if (!isset($tokens['contact'])) {
-    return;
-  }
-
-  // Get settings
-  $result = \Civi\Api4\Setting::get()
-    ->setSelect([
-      'monetaryThousandSeparator',
-      'monetaryDecimalPoint',
-    ])
-    ->execute();
-
-  if (isset($result['error_code'])) {
-    return;
-  }
-
-  foreach ($result as $row) {
-    $settings[$row['name']] = $row['value'];
-  }
-
-  foreach ($tokens['contact'] as $tokenName => $tokenValue) {
-
-    // Only for custom tokens
-    if (substr($tokenName, 0, 6) != 'custom') {
-      continue;
+function number_grouping_civicrm_tokenValues(&$values, $cids, $job = null, $tokens = [], $context = null)
+{
+    // Apply only for contact tokens
+    if (!isset($tokens['contact'])) {
+        return;
     }
 
-    foreach ($cids as $cid) {
+    // Get settings
+    $result = \Civi\Api4\Setting::get()
+        ->setSelect(
+            [
+                'monetaryThousandSeparator',
+                'monetaryDecimalPoint',
+            ]
+        )
+        ->execute();
 
-      $value = $values[$cid][$tokenName];
-
-      // Is it numeric?
-      if (is_numeric($value)) {
-        $values[$cid][$tokenName] = number_format($value, 0, $settings['monetaryDecimalPoint'],
-          $settings['monetaryThousandSeparator']);
-      }
+    if (isset($result['error_code'])) {
+        return;
     }
-  }
+
+    foreach ($result as $row) {
+        $settings[$row['name']] = $row['value'];
+    }
+
+    foreach ($tokens['contact'] as $tokenName => $tokenValue) {
+        // Only for custom tokens
+        if (substr($tokenName, 0, 6) != 'custom') {
+            continue;
+        }
+
+        foreach ($cids as $cid) {
+            $value = $values[$cid][$tokenName];
+
+            // Is it numeric?
+            if (is_numeric($value)) {
+                $values[$cid][$tokenName] = number_format(
+                    $value,
+                    0,
+                    $settings['monetaryDecimalPoint'],
+                    $settings['monetaryThousandSeparator']
+                );
+            }
+        }
+    }
 }
