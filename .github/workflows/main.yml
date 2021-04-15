@@ -10,7 +10,7 @@ env:
   APACHE_DIR:          "/etc/apache2"
   SITE_NAME:           "composer-site.com"
   LOCAL_DEPLOY_TARGET: "/var/www/html"
-  EXTENSION_NAME:      "number-grouping"
+  EXTENSION_NAME:      "number_grouping"
   PHP_VERSION:         7.3
 
 jobs:
