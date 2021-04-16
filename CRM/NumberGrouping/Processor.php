@@ -10,6 +10,11 @@
 class CRM_NumberGrouping_Processor
 {
     /**
+     * Default number of decimals for formatting
+     */
+    public const DEFAULT_DECIMALS = 0;
+
+    /**
      * Get relevant settings
      *
      * @return array

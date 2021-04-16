@@ -190,7 +190,7 @@ function number_grouping_civicrm_tokenValues(&$values, $cids, $job = null, $toke
         foreach ($cids as $cid) {
             $values[$cid][$token_name] = CRM_NumberGrouping_Processor::formatNumbers(
                 $values[$cid][$token_name],
-                0,
+                CRM_NumberGrouping_Processor::DEFAULT_DECIMALS,
                 $options['decimal_separator'],
                 $options['thousand_separator']
             );
