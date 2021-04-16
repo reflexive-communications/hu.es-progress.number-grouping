@@ -167,51 +167,33 @@ function number_grouping_civicrm_themes(&$themes)
  * @param array $tokens
  * @param null $context
  *
+ * @throws \API_Exception
+ * @throws \CRM_Core_Exception
  * @throws \Civi\API\Exception\UnauthorizedException
  */
 function number_grouping_civicrm_tokenValues(&$values, $cids, $job = null, $tokens = [], $context = null)
 {
-    // Apply only for contact tokens
-    if (!isset($tokens['contact'])) {
+    // Only for contact tokens
+    if (empty($tokens['contact'])) {
         return;
     }
 
-    // Get settings
-    $result = \Civi\Api4\Setting::get()
-        ->setSelect(
-            [
-                'monetaryThousandSeparator',
-                'monetaryDecimalPoint',
-            ]
-        )
-        ->execute();
+    $options = CRM_NumberGrouping_Processor::getSeparators();
 
-    if (isset($result['error_code'])) {
-        return;
-    }
-
-    foreach ($result as $row) {
-        $settings[$row['name']] = $row['value'];
-    }
-
-    foreach ($tokens['contact'] as $tokenName => $tokenValue) {
+    // Loop through tokens
+    foreach ($tokens['contact'] as $token_name => $token_value) {
         // Only for custom tokens
-        if (substr($tokenName, 0, 6) != 'custom') {
+        if (substr($token_name, 0, 6) != 'custom') {
             continue;
         }
 
         foreach ($cids as $cid) {
-            $value = $values[$cid][$tokenName];
-
-            // Is it numeric?
-            if (is_numeric($value)) {
-                $values[$cid][$tokenName] = number_format(
-                    $value,
-                    0,
-                    $settings['monetaryDecimalPoint'],
-                    $settings['monetaryThousandSeparator']
-                );
-            }
+            $values[$cid][$token_name] = CRM_NumberGrouping_Processor::formatNumbers(
+                $values[$cid][$token_name],
+                CRM_NumberGrouping_Processor::DEFAULT_DECIMALS,
+                $options['decimal_separator'],
+                $options['thousand_separator']
+            );
         }
     }
 }

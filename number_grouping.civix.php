@@ -87,7 +87,6 @@ class CRM_NumberGrouping_ExtensionUtil
     {
         return self::CLASS_PREFIX.'_'.str_replace('\\', '_', $suffix);
     }
-
 }
 
 use CRM_NumberGrouping_ExtensionUtil as E;
