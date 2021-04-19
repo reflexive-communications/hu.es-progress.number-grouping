@@ -1,5 +1,5 @@
 <?xml version="1.0"?>
-<extension key="hu.es-progress.number-grouping" type="module">
+<extension key="number-grouping" type="module">
     <file>number_grouping</file>
     <name>Number grouping</name>
     <description>Format numbers in custom contact tokens</description>
@@ -9,13 +9,13 @@
         <email>sandor@es-progress.hu</email>
     </maintainer>
     <urls>
-        <url desc="Main Extension Page">https://github.com/reflexive-communications/hu.es-progress.number-grouping</url>
-        <url desc="Documentation">https://github.com/reflexive-communications/hu.es-progress.number-grouping</url>
-        <url desc="Support">https://github.com/reflexive-communications/hu.es-progress.number-grouping/issues</url>
+        <url desc="Main Extension Page">https://github.com/reflexive-communications/number-grouping</url>
+        <url desc="Documentation">https://github.com/reflexive-communications/number-grouping</url>
+        <url desc="Support">https://github.com/reflexive-communications/number-grouping/issues</url>
         <url desc="Licensing">http://www.gnu.org/licenses/agpl-3.0.html</url>
     </urls>
-    <releaseDate>2021-04-15</releaseDate>
-    <version>2.0.0</version>
+    <releaseDate>2021-04-19</releaseDate>
+    <version>2.0.1</version>
     <develStage>stable</develStage>
     <compatibility>
         <ver>5.0</ver>

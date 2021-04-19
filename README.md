@@ -1,6 +1,6 @@
-# hu.es-progress.number-grouping
+# number-grouping
 
-![CI](https://github.com/reflexive-communications/hu.es-progress.number-grouping/workflows/CI/badge.svg)
+![CI](https://github.com/reflexive-communications/number-grouping/workflows/CI/badge.svg)
 
 ## Before
 
@@ -27,7 +27,7 @@ Sysadmins and developers may clone the [Git](https://en.wikipedia.org/wiki/Git) 
 with the command-line tool [cv](https://github.com/civicrm/cv).
 
 ```bash
-git clone https://github.com/reflexive-communications/hu.es-progress.number-grouping.git
+git clone https://github.com/reflexive-communications/number-grouping.git
 cv en number_grouping
 ```
 
