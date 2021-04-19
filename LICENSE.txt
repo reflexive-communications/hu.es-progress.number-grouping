@@ -1,4 +1,4 @@
-Package: hu.es-progress.number-grouping
+Package: number-grouping
 Copyright (C) 2020, Sandor Semsey <sandor@es-progress.hu>
 Licensed under the GNU Affero Public License 3.0 (below).
 

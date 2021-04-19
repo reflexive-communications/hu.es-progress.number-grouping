@@ -10,7 +10,7 @@ class CRM_NumberGrouping_ExtensionUtil
 {
     const SHORT_NAME = "number_grouping";
 
-    const LONG_NAME = "hu.es-progress.number-grouping";
+    const LONG_NAME = "number-grouping";
 
     const CLASS_PREFIX = "CRM_NumberGrouping";
 
